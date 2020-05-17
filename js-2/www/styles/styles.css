@@ -1,0 +1,173 @@
+@import 'normalize.css';
+
+@font-face {
+    font-family: 'maven_proregular';
+    src: url('/fonts/mavenpro-variablefont_wght-webfont.woff2') format('woff2'),
+         url('/fonts/mavenpro-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+
+    background-color: black;
+    font-family: maven_proregular;
+    color: white;
+}
+
+main {
+
+    display: flex;
+}
+
+header {
+
+    height:10vh;
+    background-image: url("/images/header-image.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    resize: both;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: x-large;
+
+
+}
+
+.container {
+
+    margin-top: 10px;
+    display: grid;
+    gap: 10px;
+    
+   
+}
+
+#container-1 {
+
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr 1fr;
+            
+}
+
+.item {
+
+background-color: black;
+border: thin solid white;
+display: flex;
+flex-direction: column;        
+}
+
+.foto {
+
+    padding: 10px;
+    flex: 1;
+    flex-grow: 0;
+
+    object-fit: cover;
+
+}
+.item .datos h2 {
+
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 0;
+    margin-left: 10px;
+    flex: 1;
+   
+}
+
+.item .datos h3 {
+
+    margin-top: 0;
+    margin-bottom: 0;   
+    font-size: 40px;
+    color: red;
+    text-align: left;
+    margin-left: 10px;
+    flex: 1;
+
+}
+
+.item p {
+    height: 25vh;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 20px;
+    flex: 1;
+
+}
+
+.boton {
+
+  
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+   
+}
+
+button {
+    height: 5vh;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    flex-grow: 1;
+
+    
+    }
+
+    button:hover {
+        background-color: grey;
+    }
+    
+    
+#margen {
+
+color: red;
+padding: 10px;
+
+}
+
+
+@media screen and (max-width: 600px) {
+    p {
+            font-size: 25px;
+            
+        }
+    body {
+
+            background-color: white;
+            color: black;
+        }
+        
+        .item .datos h3 {
+            color: blue;  
+     }
+
+     .item {
+
+        background-color: white;
+        text-align: center;
+        border: thin solid grey;
+        display: flex;
+        flex-direction: column;   
+
+     }
+    }
+
