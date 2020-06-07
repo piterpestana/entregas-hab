@@ -3,63 +3,55 @@
 const list = document.getElementById('basket')
 const botonR = document.querySelectorAll('.boton')
 
-
 //Funciones
 
 const borrarElemento = e => {
-    if (e.target.classList.contains('delete')) {
+    if (e.target.classList.contains('delete-card')) {
         e.target.parentElement.remove()
     }
 
 }
-
+//esto por qué funciona si pone basket?
 const addElemento = elemento => {
     basket.appendChild(elemento)
 }
 
-
-
 const crearElemento = mensaje => {
 
 
-    const li = document.createElement('p')
-    li.textContent = mensaje
-    const button = document.createElement('button')
-    button.classList = 'delete'
-    button.textContent = 'x'
-    li.appendChild(button)
+    const li = document.createElement('div')
+    li.id = 'item' + mensaje.id
+    li.className = 'item-item'
+    li.innerHTML = `
+    <section>
+        <img src="${mensaje.foto}" alt="${mensaje.nombre}" class="img_aside">
+        <h2 class="name">${mensaje.nombre}</h2>
+        <h3 class="price">${mensaje.precio}</h3>
+        <button class="delete-card" data-id="${mensaje.id}">Eliminar</button>
+    </section>
+`
     addElemento(li)
 
 }
-
-
 
 const extraerDatos = datos => {
 
     const tarjeta = {
         foto: datos.querySelector('.foto').src,
-        nombre: datos.querySelector('h2').innerText,
-        precio: datos.querySelector('h3').innerText
+        nombre: datos.querySelector('h2').textContent,
+        precio: datos.querySelector('h3').textContent,
+        id: datos.getAttribute('id')
     }
-    const tarjetaString = JSON.stringify(tarjeta)
+    crearElemento(tarjeta)
 
-    // No consigo convertir este objeto en código que se lea HTML. La foto necesitaría un href, 
-    // el nombre un h1, etc. Puedo convertirlo en un array y cambiar cada valor 
-    // pero sigue apareciendo en formato array. 
-    // Leyendo por internet, He intentado esto:  
-    // const tarjetaString = JSON.stringify(tarjeta,[`<img class="foto" src=${tarjeta.foto}`, `<h2>${tarjeta.nombre}</h2>`, `<h2>${tarjeta.nombre}</h2>`]) 
-    
-
-crearElemento(tarjetaString)
 }
 
-
 const enviarMensaje = e => {
-
+    e.preventDefault()
     extraerDatos(e.target.parentElement)
 
 }
 
 // Listeners
-botonR.forEach(boton => { boton.addEventListener('click', enviarMensaje) })
+botonR.forEach(boton => { boton.addEventListener('click', e => enviarMensaje(e)) })
 list.addEventListener('click', borrarElemento)

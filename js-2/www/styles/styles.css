@@ -76,7 +76,6 @@ flex-direction: column;
     text-align: left;
     margin-bottom: 0;
     margin-left: 10px;
-    flex: 1;
    
 }
 
@@ -88,17 +87,15 @@ flex-direction: column;
     color: red;
     text-align: left;
     margin-left: 10px;
-    flex: 1;
 
 }
 
 .item p {
-    height: 25vh;
+    
     text-align: left;
     margin-left: 10px;
     margin-right: 10px;
     line-height: 20px;
-    flex: 1;
 
 }
 
@@ -106,19 +103,20 @@ flex-direction: column;
 
   
     background-color: red;
-    font-size: 20px;
+    font-size: 20px; 
+    height: 45px;
     font-weight: bold;
     color: white;
     display: flex;
     justify-content: center;
-    flex-grow: 1;
+    margin-top: auto;
    
 }
 
 button {
-    height: 5vh;
+    /* height: 5vh; */
     background-color: red;
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: bold;
     color: white;
     display: flex;
@@ -127,7 +125,7 @@ button {
     border: none;
     transition: background-color 0.2s ease-in-out;
     cursor: pointer;
-    flex-grow: 1;
+   
 
     
     }
@@ -141,6 +139,25 @@ button {
 
 color: red;
 padding: 10px;
+
+}
+
+.img_aside {
+
+    width: 45vh;
+    height: 40vh;
+    flex-grow: 0;
+}
+
+#basket {
+
+    padding: 20px;
+
+}
+
+.delete-card {
+
+    margin-bottom: 8vh;
 
 }
 
