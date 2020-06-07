@@ -1,0 +1,18 @@
+{
+  "name": "back-jsvi05",
+  "version": "0.0.1",
+  "description": "Aplicacion parseo playas",
+  "main": "Exercise_js3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "0.19.2",
+    "axios-cache-adapter": "2.5.0",
+    "csvtojson": "2.0.10",
+    "express": "4.17.1",
+    "body-parser": "1.19.0"
+  },
+  "author": "Pedro",
+  "license": "ISC"
+}
