@@ -27,12 +27,10 @@ PhotosofClient = (client) => {
     let PhotosOfYou = [];
     
     for (let photo of photos) {
-      
-        UpClient = client.toUpperCase() // No consigo que esto funcione :(
 
-        if (photo.people.indexOf(client)>-1) { // Aquí haría referencia a UpClient... pero tampoco funciona
+        if (photo.people.indexOf(client)>-1) { 
 
-            PhotosOfYou.push(photo)
+            PhotosOfYou.push(photo.name)
 
                     }
                 }
