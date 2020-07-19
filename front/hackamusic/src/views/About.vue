@@ -1,0 +1,50 @@
+<template>
+  <div class="about">
+    <h1>This page was created by Pedro using the following technology</h1>
+
+    <div class="tech">
+      <a href="https://www.last.fm/api/"> <img
+        src="data:image/png;base64,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"
+      /> </a>
+     <a href="https://www.npmjs.com/package/axios"> 
+      <img src="https://www.luisllamas.es/wp-content/uploads/2019/05/axios.png">
+    </a>
+     <a href="https://vuejs.org/"> 
+      <img src="https://pbs.twimg.com/profile_images/875996174305472512/upM71pVR_400x400.jpg">
+   </a>
+     <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"> 
+      <img src="https://www.htmlstudio.co.uk/wp-content/uploads/2015/03/logo_CSS3.png">
+   </a>
+   <a href="https://en.wikipedia.org/wiki/HTML5"> 
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/HTML5_logo_resized.svg/1200px-HTML5_logo_resized.svg.png">
+   </a>
+
+  
+
+    </div>
+  </div>
+</template>
+
+
+<script>
+export default {};
+</script>
+
+<style scoped>
+
+
+div {
+  margin-top: 120px;
+}
+
+img {
+  
+  padding: 30px; 
+max-height: 300px;
+max-width: 400px;
+width: 240px;
+height: 240px;
+}
+
+
+</style>
