@@ -1,8 +1,6 @@
 <template>
 
 <div id="app">
-<!-- Declaro el footer para mostrarlo en toda la web -->
-<footermusic />
 
 <div id="nav">
   <router-link to="/">Home</router-link> |
@@ -12,25 +10,25 @@
 </div>
 <router-view/>
 <!-- añado el HTML Del footer porque no consigo aplicar el componente -->
-<footer id="footer">
-<p>This website was created by Pedro during a Hack a Boss Bootcamp</p>
-<br />
-<p>July 2020</p>
-</footer>
 
+   <footer id="footer">
+      <p>This website was created by Pedro during a Hack a Boss Bootcamp</p>
+      <br />
+      <p>July 2020</p>
+    </footer>
 </div>
 </template>
 
 <script>
 
 //Importo el footer para mostrarlo en toda la web
-import footerMusic from '@/components/FooterCustom.vue'
+
 export default {
 
 //registro el footer para mostralo en toda la web
 name: 'footerMusic',
 components: {
-footerMusic
+
 },
 
 }
@@ -68,6 +66,18 @@ ul {
   font-size: 20px;
 }
 
+#footer {
+  color: white;
+  background-color: black;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  max-height: 3px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 50px;
+}
 
 
 

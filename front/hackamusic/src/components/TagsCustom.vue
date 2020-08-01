@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <h1>Loved most:</h1>
     <h2>{{thetags[0].name}}</h2>
     <h1>Loved least:</h1>
@@ -18,7 +18,7 @@
 <script>
 import api from "@/api/index.js";
 export default {
-  name: "TagsCustom",
+  name: "toptags",
 
   data() {
     return {
